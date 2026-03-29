@@ -90,7 +90,7 @@ export function Contact() {
 
           {/* PDF download — points to your resume file in /public */}
           <a
-            href="Tejaswinee_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Tejaswinee_Resume_2026.pdf`}
             download="Tejaswinee_Shidhore_Resume.pdf"
             className="inline-flex items-center gap-2 px-7 py-3.5 border border-dark-600 hover:border-accent-500 text-slate-300 hover:text-white font-medium rounded-xl transition-all duration-200 hover:-translate-y-0.5"
           >
