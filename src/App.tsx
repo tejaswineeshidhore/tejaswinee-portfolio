@@ -7,10 +7,13 @@ import { Projects } from "./components/Projects";
 import { Education } from "./components/Education";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ScrollProgress } from "./components/ScrollProgress";
+import { BackToTop } from "./components/BackToTop";
 
 export default function App() {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <Nav />
       <Hero />
       <About />
@@ -20,6 +23,7 @@ export default function App() {
       <Education />
       <Contact />
       <Footer />
+      <BackToTop />
     </div>
   );
 }

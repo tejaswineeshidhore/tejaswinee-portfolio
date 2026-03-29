@@ -98,20 +98,68 @@ export const resume = {
         "A React Native mobile platform consolidating 10+ internal employee services into a single application used by 10,000+ Flipkart employees, improving internal accessibility and employee experience at scale.",
       tech: ["React Native", "React.js", "REST APIs"],
       impact: "10K+ employees",
+      category: ["Mobile App", "Web App"],
+      highlights: [
+        "Consolidated 10+ internal employee services into one app",
+        "Adopted by 10,000+ Flipkart employees across offices",
+        "Improved internal accessibility and employee experience",
+      ],
     },
     {
       name: "GST Reconciliation Platform",
       description:
         "An Angular-based internal finance tool automating tax reporting workflows for Flipkart finance teams, replacing manual processes with automated reconciliation pipelines.",
-      tech: ["Angular", "REST APIs", "TypeScript"],
+      tech: ["Angular", "TypeScript", "REST APIs"],
       impact: "~40% effort reduction",
+      category: ["Web App"],
+      highlights: [
+        "Automated tax reporting workflows end-to-end",
+        "Reduced manual reconciliation effort by ~40%",
+        "Improved reporting accuracy for finance teams",
+      ],
+    },
+    {
+      name: "KloudHybrid",
+      description:
+        "A Progressive Web App for hybrid workplace management enabling employees to explore office spaces with 360° walkthroughs, reserve desks via QR codes and kiosks, check in virtually, and access real-time analytics on capacity, footfall, and engagement.",
+      tech: ["Angular", "Material UI", "REST APIs"],
+      impact: "Enterprise-scale",
+      category: ["Web App", "PWA", "Desktop App"],
+      highlights: [
+        "Immersive 360° office space exploration and walkthroughs",
+        "Safe hot desking via QR codes, kiosks, and badging",
+        "Virtual check-in to join workspaces from anywhere",
+        "Analytics and reporting on capacity, density, footfall, dwell time, productivity, and engagement",
+        "Desk reservation system for visitors and employees",
+      ],
+    },
+    {
+      name: "Reflect — Performance Dashboard",
+      description:
+        "A React.js internal feedback and performance platform enabling employees to give and receive structured feedback and ratings. Surfaces historical performance data, tracks employee growth over time, and supports hierarchical appraisal cycles across management levels.",
+      tech: ["React.js", "REST APIs"],
+      impact: "Multi-level org",
+      category: ["Web App"],
+      highlights: [
+        "Give and receive structured feedback and ratings between peers and managers",
+        "Historical data visualisation of employee growth and performance trends",
+        "Hierarchical access levels — employee, manager, leadership views",
+        "Appraisal cycle management with configurable review periods",
+      ],
     },
     {
       name: "Kloudspot Analytics Dashboard",
       description:
-        "Full-cycle development of an analytics dashboard platform with widgets, reports, multi-factor authentication, role-based authorization, and third-party application integrations.",
-      tech: ["Angular", "Angular Material", "Node.js", "REST APIs"],
+        "Full-cycle development of an analytics platform with configurable widgets, reports, multi-factor authentication, role-based authorisation, and deep third-party application integrations.",
+      tech: ["Angular", "Material UI", "REST APIs"],
       impact: "95% on-time delivery",
+      category: ["Web App"],
+      highlights: [
+        "Configurable analytics widgets and custom report builder",
+        "Multi-factor authentication and role-based authorisation",
+        "Third-party application integrations for extended functionality",
+        "Responsive layout with custom theming support",
+      ],
     },
   ],
 };
