@@ -49,7 +49,7 @@ export function Projects() {
       id="projects"
       label="04. projects"
       heading="Things I've Built"
-      className="bg-dark-900/50"
+      alternate
     >
       {/* Arrow controls */}
       <div className="flex items-center justify-between mb-6">

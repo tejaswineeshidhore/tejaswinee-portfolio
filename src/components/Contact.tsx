@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Section } from './Section';
-import { resume } from '../data/resume';
+import { useState } from "react";
+import { Section } from "./Section";
+import { resume } from "../data/resume";
 
 export function Contact() {
   const [copied, setCopied] = useState(false);
@@ -12,8 +12,7 @@ export function Contact() {
   };
 
   return (
-    <Section id="contact" label="06. contact" heading="Get In Touch"
-      className="bg-dark-900/50">
+    <Section id="contact" label="06. contact" heading="Get In Touch" alternate>
       <div className="max-w-2xl">
         <p className="text-slate-400 text-lg leading-relaxed mb-10">
           I'm always open to discussing new opportunities, interesting projects,
@@ -38,7 +37,7 @@ export function Contact() {
                 className="shrink-0 text-xs font-mono px-2 py-1 rounded border border-dark-600 hover:border-accent-500 text-slate-500 hover:text-accent-400 transition-all duration-200"
                 title="Copy email"
               >
-                {copied ? '✓ copied' : 'copy'}
+                {copied ? "✓ copied" : "copy"}
               </button>
             </div>
           </div>
@@ -91,7 +90,7 @@ export function Contact() {
 
           {/* PDF download — points to your resume file in /public */}
           <a
-            href="/tejaswinee-portfolio/Tejaswinee_Resume.pdf"
+            href="Tejaswinee_Resume.pdf"
             download="Tejaswinee_Shidhore_Resume.pdf"
             className="inline-flex items-center gap-2 px-7 py-3.5 border border-dark-600 hover:border-accent-500 text-slate-300 hover:text-white font-medium rounded-xl transition-all duration-200 hover:-translate-y-0.5"
           >

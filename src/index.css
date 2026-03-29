@@ -1,27 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @theme {
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 
-  /* Dark background scale */
   --color-dark-950: #030712;
   --color-dark-900: #0a0f1e;
   --color-dark-800: #0f172a;
   --color-dark-700: #1e293b;
   --color-dark-600: #334155;
 
-  /* Accent — sky blue */
   --color-accent-400: #38bdf8;
   --color-accent-500: #0ea5e9;
   --color-accent-600: #0284c7;
 
-  /* Emerald */
   --color-emerald-400: #34d399;
   --color-emerald-500: #10b981;
 
-  /* Animations */
   --animate-blink: blink 1s step-end infinite;
   --animate-fade-up: fadeUp 0.6s ease forwards;
 }
@@ -47,16 +43,67 @@
   }
 }
 
+/* ============================================
+   THEME TOKENS — swap on .light class
+   ============================================ */
+
+:root {
+  --bg-page: #030712;
+  --bg-surface: #0a0f1e;
+  --bg-card: #0f172a;
+  --bg-card-hover: #1e293b;
+  --border-color: #1e293b;
+  --border-hover: #334155;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
+  --text-hint: #334155;
+  --grid-color: rgba(56, 189, 248, 0.08);  /* sky-400 at 8% on dark */
+}
+
+html.light {
+  --grid-color: rgba(2, 132, 199, 0.07);   /* sky-600 at 7% on light */
+
+  /* Semantic tokens */
+  --bg-page: #f8fafc;
+  --bg-surface: #edf2f7;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --border-color: #e2e8f0;
+  --border-hover: #94a3b8;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --text-hint: #94a3b8;
+
+  /* Remap dark Tailwind color scale → light equivalents.
+     This fixes every bg-dark-* and border-dark-* class without
+     touching any component. */
+  --color-dark-950: #ffffff;
+  --color-dark-900: #f8fafc;
+  --color-dark-800: #ffffff;
+  --color-dark-700: #e2e8f0;
+  --color-dark-600: #cbd5e1;
+
+  /* Darker accent so text-accent-400 has enough contrast on white */
+  --color-accent-400: #0284c7;
+
+  color-scheme: light;
+}
+
 @layer base {
   * {
     scroll-behavior: smooth;
   }
 
   body {
-    background-color: var(--color-dark-950);
-    color: #cbd5e1; /* slate-300 */
+    background-color: var(--bg-page);
+    color: var(--text-secondary);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
   }
 
   ::selection {
@@ -67,16 +114,13 @@
   ::-webkit-scrollbar {
     width: 6px;
   }
-
   ::-webkit-scrollbar-track {
-    background-color: var(--color-dark-900);
+    background-color: var(--bg-surface);
   }
-
   ::-webkit-scrollbar-thumb {
-    background-color: var(--color-dark-600);
+    background-color: var(--border-hover);
     border-radius: 9999px;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     background-color: var(--color-accent-500);
   }
@@ -86,7 +130,7 @@
   .section-heading {
     font-size: 1.875rem;
     font-weight: 700;
-    color: white;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
   }
 
@@ -101,13 +145,14 @@
   }
 
   .card {
-    background-color: var(--color-dark-800);
-    border: 1px solid var(--color-dark-700);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 0.75rem;
     padding: 1.5rem;
     transition:
       border-color 0.3s,
-      box-shadow 0.3s;
+      box-shadow 0.3s,
+      background-color 0.3s;
   }
 
   .card:hover {
@@ -118,8 +163,8 @@
 
   .tag {
     padding: 0.25rem 0.75rem;
-    background-color: var(--color-dark-700);
-    border: 1px solid var(--color-dark-600);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
     border-radius: 9999px;
     font-size: 0.75rem;
     font-family: var(--font-mono);
@@ -133,7 +178,7 @@
   }
 
   .nav-link {
-    color: #94a3b8; /* slate-400 */
+    color: var(--text-secondary);
     font-size: 0.875rem;
     font-weight: 500;
     text-decoration: none;
@@ -153,10 +198,30 @@
   }
 
   .nav-link:hover {
-    color: white;
+    color: var(--text-primary);
   }
-
   .nav-link:hover::after {
     width: 100%;
   }
+}
+
+/* ================================================================
+   LIGHT MODE OVERRIDES — outside @layer so they beat Tailwind's
+   utility layer in the cascade, no !important needed.
+   ================================================================ */
+
+/* text-white / text-slate-* are hardcoded in components;
+   override them here so they're readable on a light background. */
+html.light .text-white     { color: #0f172a; }
+html.light .text-slate-300 { color: #334155; }
+html.light .text-slate-400 { color: #475569; }
+html.light .text-slate-500 { color: #64748b; }
+html.light .text-slate-600 { color: #64748b; }
+
+/* Card elevation — shadows replace the depth cues that dark bg provides */
+html.light .card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+}
+html.light .card:hover {
+  box-shadow: 0 8px 24px rgba(2,132,199,0.10);
 }

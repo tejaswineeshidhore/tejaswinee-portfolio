@@ -12,7 +12,7 @@ export function Experience() {
       id="experience"
       label="02. experience"
       heading="Where I've Worked"
-      className="bg-dark-900/50"
+      alternate
     >
       <div className="flex flex-col md:flex-row gap-8">
         {/* Company tabs */}
