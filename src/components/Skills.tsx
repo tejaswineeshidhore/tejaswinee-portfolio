@@ -3,7 +3,7 @@ import { resume } from "../data/resume";
 
 export function Skills() {
   return (
-    <Section id="skills" label="03. skills" heading="What I Work With">
+    <Section id="skills" label="02. skills" heading="What I Work With" alternate>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {Object.entries(resume.skills).map(([category, items]) => (
           <div key={category} className="card group">

@@ -95,12 +95,13 @@ export const resume = {
     {
       name: "FEMO — Flipkart Employee Moments",
       description:
-        "A React Native mobile platform consolidating 10+ internal employee services into a single application used by 10,000+ Flipkart employees, improving internal accessibility and employee experience at scale.",
+        "An all-in-one platform capturing every milestone of a Flipkart employee's journey — from onboarding to exit — used daily by 10,000+ employees.",
       tech: ["React Native", "React.js", "REST APIs"],
-      impact: "10K+ employees",
+      company: "Flipkart",
       category: ["Mobile App", "Web App"],
       highlights: [
         "Consolidated 10+ internal employee services into one app",
+        "Covers the full employee lifecycle — joining, growth, and exit",
         "Adopted by 10,000+ Flipkart employees across offices",
         "Improved internal accessibility and employee experience",
       ],
@@ -108,9 +109,9 @@ export const resume = {
     {
       name: "GST Reconciliation Platform",
       description:
-        "An Angular-based internal finance tool automating tax reporting workflows for Flipkart finance teams, replacing manual processes with automated reconciliation pipelines.",
+        "An Angular-based internal finance tool automating tax reporting workflows for Flipkart finance teams, replacing manual processes with automated pipelines.",
       tech: ["Angular", "TypeScript", "REST APIs"],
-      impact: "~40% effort reduction",
+      company: "Flipkart",
       category: ["Web App"],
       highlights: [
         "Automated tax reporting workflows end-to-end",
@@ -119,11 +120,25 @@ export const resume = {
       ],
     },
     {
+      name: "Reflect — Performance Dashboard",
+      description:
+        "Internal feedback and appraisal platform supporting structured peer reviews, performance tracking, and hierarchical appraisal cycles.",
+      tech: ["React.js", "REST APIs"],
+      company: "Kloudspot",
+      category: ["Web App"],
+      highlights: [
+        "Give and receive structured feedback and ratings between peers and managers",
+        "Historical data visualisation of employee growth and performance trends",
+        "Hierarchical access levels — employee, manager, leadership views",
+        "Appraisal cycle management with configurable review periods",
+      ],
+    },
+    {
       name: "KloudHybrid",
       description:
-        "A Progressive Web App for hybrid workplace management enabling employees to explore office spaces with 360° walkthroughs, reserve desks via QR codes and kiosks, check in virtually, and access real-time analytics on capacity, footfall, and engagement.",
+        "Hybrid workplace platform combining flexible work options with immersive in-office simulations — powered by data and AI to deliver safe, secure, and personalised work experiences.",
       tech: ["Angular", "Material UI", "REST APIs"],
-      impact: "Enterprise-scale",
+      company: "Kloudspot",
       category: ["Web App", "PWA", "Desktop App"],
       highlights: [
         "Immersive 360° office space exploration and walkthroughs",
@@ -134,25 +149,11 @@ export const resume = {
       ],
     },
     {
-      name: "Reflect — Performance Dashboard",
-      description:
-        "A React.js internal feedback and performance platform enabling employees to give and receive structured feedback and ratings. Surfaces historical performance data, tracks employee growth over time, and supports hierarchical appraisal cycles across management levels.",
-      tech: ["React.js", "REST APIs"],
-      impact: "Multi-level org",
-      category: ["Web App"],
-      highlights: [
-        "Give and receive structured feedback and ratings between peers and managers",
-        "Historical data visualisation of employee growth and performance trends",
-        "Hierarchical access levels — employee, manager, leadership views",
-        "Appraisal cycle management with configurable review periods",
-      ],
-    },
-    {
       name: "Kloudspot Analytics Dashboard",
       description:
-        "Full-cycle development of an analytics platform with configurable widgets, reports, multi-factor authentication, role-based authorisation, and deep third-party application integrations.",
+        "AI-driven analytics platform turning camera, IoT, and location data into real-time insights on footfall, density, and customer behaviour for any given space.",
       tech: ["Angular", "Material UI", "REST APIs"],
-      impact: "95% on-time delivery",
+      company: "Kloudspot",
       category: ["Web App"],
       highlights: [
         "Configurable analytics widgets and custom report builder",

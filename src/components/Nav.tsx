@@ -5,8 +5,8 @@ import { useTheme } from "../hooks/useTheme";
 
 const links = [
   "about",
-  "experience",
   "skills",
+  "experience",
   "projects",
   "education",
   "contact",

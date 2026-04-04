@@ -5,11 +5,9 @@ import { resume } from "../data/resume";
 
 const categoryColors: Record<string, string> = {
   "Mobile App": "text-purple-400 bg-purple-400/10 border-purple-400/20",
-  "Web App": "text-accent-400 bg-accent-400/10 border-accent-400/20",
-  PWA: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20",
+  "Web App": "text-cyan-400 bg-cyan-400/10 border-cyan-400/20",
+  PWA: "text-rose-400 bg-rose-400/10 border-rose-400/20",
   "Desktop App": "text-amber-400 bg-amber-400/10 border-amber-400/20",
-  Dashboard: "text-accent-400 bg-accent-400/10 border-accent-400/20",
-  "Internal Tool": "text-amber-400 bg-amber-400/10 border-amber-400/20",
 };
 
 export function Projects() {
@@ -101,13 +99,13 @@ export function Projects() {
 
               {/* Index + impact */}
               <div className="flex items-center justify-between mb-4">
-                <div className="w-8 h-8 rounded-lg bg-accent-500/10 border border-accent-500/20 flex items-center justify-center">
-                  <span className="text-accent-400 font-mono text-xs font-bold">
+                <div className="w-8 h-8 rounded-lg bg-slate-500/10 border border-slate-500/20 flex items-center justify-center">
+                  <span className="text-slate-400 font-mono text-xs font-bold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <span className="text-xs font-mono text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded border border-emerald-400/20">
-                  {project.impact}
+                  {project.company}
                 </span>
               </div>
 
@@ -132,7 +130,7 @@ export function Projects() {
               </div>
 
               {/* Description */}
-              <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-4">
+              <p className={`text-slate-500 text-sm leading-relaxed mb-4 ${isExpanded ? '' : 'line-clamp-4'}`}>
                 {project.description}
               </p>
 

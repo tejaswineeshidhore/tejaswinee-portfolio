@@ -10,9 +10,8 @@ export function Experience() {
   return (
     <Section
       id="experience"
-      label="02. experience"
+      label="03. experience"
       heading="Where I've Worked"
-      alternate
     >
       <div className="flex flex-col md:flex-row gap-8">
         {/* Company tabs */}

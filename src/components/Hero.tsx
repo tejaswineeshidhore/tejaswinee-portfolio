@@ -5,7 +5,6 @@ import { resume } from "../data/resume";
 const roles = [
   "Associate Technical Lead",
   "Frontend Engineer",
-  "React Developer",
   "Team Lead & Mentor",
 ];
 
@@ -148,9 +147,9 @@ export function Hero() {
         >
           {[
             { value: "6+", label: "Years Experience" },
+            { value: "3", label: "Companies" },
             { value: "10K+", label: "Users Impacted" },
             { value: "80%+", label: "Test Coverage" },
-            { value: "95%", label: "On-time Delivery" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}
